@@ -1,41 +1,20 @@
 package com.yx.oa.entity;
 
+import lombok.Data;
+
+/**
+ * lombok 依赖 + lombok 插件
+ * 用注释减少代码
+ * @Data = @Setter + @Getter
+ * @Setter = 生成字段的set方法
+ * @Getter = 生成字段的get方法
+ */
+
+@Data
 public class User {
     //属性名与字段名一一对应
     private Long userId;
     private String userName;
     private String password;
     private Long employeeId;
-//getter and setter 的快捷键是 alt + enter
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public Long getEmployeeId() {
-        return employeeId;
-    }
-
-    public void setEmployeeId(Long employeeId) {
-        this.employeeId = employeeId;
-    }
 }
