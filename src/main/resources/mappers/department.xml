@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--1. namespace与包名类名对应-->
+<mapper namespace="com.yx.oa.dao.EmployeeDao">
+<!--    2. id与方法名对应
+        3. parameterType与方法参数对应
+        4. resultType 与返回类型对应
+-->
+    <select id="selectById" parameterType="Long" resultType="com.yx.oa.entity.Employee">
+        select * from adm_employee where employee_id = #{value}
+    </select>
+</mapper>
