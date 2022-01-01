@@ -1,9 +1,9 @@
-package com.imooc.oa.controller;
+package com.yx.oa.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.imooc.oa.entity.LeaveForm;
-import com.imooc.oa.entity.User;
-import com.imooc.oa.service.LeaveFormService;
+import com.yx.oa.entity.LeaveForm;
+import com.yx.oa.entity.User;
+import com.yx.oa.service.LeaveFormService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,6 +25,7 @@ import java.util.Map;
 public class LeaveFormServlet extends HttpServlet {
     private LeaveFormService leaveFormService = new LeaveFormService();
     private Logger logger = LoggerFactory.getLogger(LeaveFormServlet.class);
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("utf-8");
         response.setContentType("text/html;charset=utf-8");
@@ -39,7 +40,7 @@ public class LeaveFormServlet extends HttpServlet {
             this.audit(request, response);
         }
     }
-
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.doPost(request,response);
     }

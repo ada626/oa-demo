@@ -1,6 +1,6 @@
-package com.imooc.oa.dao;
+package com.yx.oa.dao;
 
-import com.imooc.oa.entity.ProcessFlow;
+import com.yx.oa.entity.ProcessFlow;
 
 import java.util.List;
 

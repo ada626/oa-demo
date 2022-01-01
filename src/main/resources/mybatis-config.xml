@@ -22,7 +22,7 @@
                         UnpooledFataSourceFactory会根据这个xml的property调用setProperties()方法，dataSource就能包含这些连接信息了
 -->
                 <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://localhost:3306/imooc-oa?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=Asia/Shanghai&amp;allowPublicKeyRetrieval=true"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/yx-oa?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=Asia/Shanghai&amp;allowPublicKeyRetrieval=true"/>
                 <property name="username" value="root"/>
                 <property name="password" value="1234"/>
 <!--                    现在可以增加一些druid预定义的属性配置了-->
@@ -37,5 +37,10 @@
         <mapper resource="mappers/test.xml"/>
         <mapper resource="mappers/user.xml"/>
         <mapper resource="mappers/rbac.xml"/>
+        <mapper resource="mappers/employee.xml"/>
+        <mapper resource="mappers/department.xml"/>
+        <mapper resource="mappers/leave_form.xml"/>
+        <mapper resource="mappers/process_flow.xml"/>
+        <mapper resource="mappers/notice.xml"/>
     </mappers>
 </configuration>

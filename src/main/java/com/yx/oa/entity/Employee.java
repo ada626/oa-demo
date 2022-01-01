@@ -1,2 +1,12 @@
-package com.yx.oa.entity;public class Employee {
+package com.yx.oa.entity;
+
+import lombok.Data;
+
+@Data
+public class Employee {
+    private Long employeeId;
+    private String name;
+    private Long departmentId;
+    private String title;
+    private Integer level;
 }

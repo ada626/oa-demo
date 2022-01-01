@@ -1,15 +1,17 @@
-package com.imooc.oa.service;
+package com.yx.oa.service;
 
-import com.imooc.oa.dao.EmployeeDao;
-import com.imooc.oa.dao.LeaveFormDao;
-import com.imooc.oa.dao.NoticeDao;
-import com.imooc.oa.dao.ProcessFlowDao;
-import com.imooc.oa.entity.Employee;
-import com.imooc.oa.entity.LeaveForm;
-import com.imooc.oa.entity.Notice;
-import com.imooc.oa.entity.ProcessFlow;
-import com.imooc.oa.service.exception.BussinessException;
-import com.imooc.oa.utils.MybatisUtils;
+import com.yx.oa.dao.EmployeeDao;
+import com.yx.oa.dao.LeaveFormDao;
+import com.yx.oa.dao.NoticeDao;
+import com.yx.oa.dao.ProcessFlowDao;
+import com.yx.oa.entity.Employee;
+import com.yx.oa.entity.LeaveForm;
+import com.yx.oa.entity.Notice;
+import com.yx.oa.entity.ProcessFlow;
+import com.yx.oa.service.exception.BussinessException;
+import com.yx.oa.utils.MybatisUtils;
+import com.yx.oa.entity.LeaveForm;
+import lombok.experimental.Accessors;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -20,6 +22,7 @@ import java.util.stream.Collectors;
 /**
  * 请假单流程服务
  */
+@Accessors(chain = true)
 public class LeaveFormService {
     /**
      * 创建请假单
