@@ -44,13 +44,8 @@ public class LeaveFormService {
             //2.增加第一条流程数据,说明表单已提交,状态为complete
             ProcessFlowDao processFlowDao = sqlSession.getMapper(ProcessFlowDao.class);
             ProcessFlow flow1 = new ProcessFlow();
-            flow1.setFormId(form.getFormId());
-            flow1.setOperatorId(employee.getEmployeeId());
-            flow1.setAction("apply");
-            flow1.setCreateTime(new Date());
-            flow1.setOrderNo(1);
-            flow1.setState("complete");
-            flow1.setIsLast(0);
+            flow1.setFormId(form.getFormId()).setOperatorId(employee.getEmployeeId()).setAction("apply")
+                    .setCreateTime(new Date()).setOrderNo(1).setState("complete").setIsLast(0);
             processFlowDao.insert(flow1);
             //3.分情况创建其余流程数据
             //3.1 7级以下员工,生成部门经理审批任务,请假时间大于72小时,还需生成总经理审批任务

@@ -1,9 +1,11 @@
 package com.yx.oa.entity;
 
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 import java.util.Date;
 
+@Accessors(chain = true)
 @Data
 public class ProcessFlow {
     private Long processId;
