@@ -1,6 +1,6 @@
-package com.imooc.oa.dao;
+package com.yx.oa.dao;
 
-import com.imooc.oa.entity.Notice;
+import com.yx.oa.entity.Notice;
 
 import java.util.List;
 
